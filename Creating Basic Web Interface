@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByFJFHUJuy8uE1IePCAZf0a11y-Y4_dXY&callback=initMap" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 5px;
+  font-size: 17px;
+  width:20%;
+}
+
+.w3-container {
+  background-color: white;
+  width:100%;
+  height:300px;
+}
+.divimg {
+  background-image: url('https://wallpapertag.com/wallpaper/full/4/8/0/421270-most-popular-full-size-hd-wallpaper-for-pc-1920x1080.jpg');
+height:500px;
+margin-top:32px;
+border-radius: 15px;
+vertical-align: middle;
+position:relative;
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 50px;
+  width:33%;
+  padding: 30px;
+  font-size: 30px;
+}
+.flex-container {
+  display: flex;
+  background-color: White;
+}
+.grid-container {
+  display: grid;
+  overflow:hidden
+  grid-row-gap:10px;
+  grid-template-columns: 1000px 1000px 750px;
+  border-style:solid;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 10px;
+}
+
+.grid-item {
+  background-color: darkblue;
+  padding: 20px;
+  height: 300px;
+  font-size: 10px;
+  overflow:hidden;
+  box-shadow: 10px 10px 18px #888888;
+  text-align: center;
+}
+#div1 {
+overflow:hidden;
+}
+.w3-button {
+color:white;
+}
+li {
+display:none;
+color:blue;
+}
+ul {
+color:blue;
+}
+ul:hover > li {
+display:block;
+}
+</style>
+<body>
+<div class="topnav" style = 'height:80px;width:100%;background-color:white;color:SlateBlue;'>
+    <a class="active" href="#home" style = 'color:SlateBlue;font-family: "Times New Roman";'><b>Home</b></a>
+    <a class = "active" href="#contact"><ul>Demo<li>1</li><li>2</li></ul></a>
+    <a class = "active" href="#contact"><ul>Demo2<li>3</li><li>4</li></ul></a>
+    <a class="active" href = '#about' style = 'color:SlateBlue;font-family: "Times New Roman";'><b>Buy Now</b></a>
+    <a class="active" href = 'form.html' style = 'color:SlateBlue;font-family: "Times New Roman";'><b>Submit Query</b></a>
+</div>
+
+<div class="vertical-menu">
+    <div class="divimg">
+
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <p id = 'p' style = 'margin-left:40px;display:block;font-family: "Times New Roman";'><b>We can Tap into Our Collective MindShare</b></p><br><br>
+        <h1 id = 'h' style = 'margin-left:40px;display:block;font-family: "Times New Roman";'><b>We help clients solve <br> complex problems</b></h1>
+        <input style = "width:160px;margin-left:40px;"; type = "button" class = "w3-button w3-border" value = 'LEARN MORE'>
+        <input style = "width:160px;margin-left:100px;"; type = "button" class = "w3-button w3-border" value = 'GET IN TOUCH'>
+
+    </div>
+    <h1 style = 'text-align:center;font-size:25px;width:100%;height:50px;'>Services</h1>
+    <div class = 'w3-container' style="box-sizing:border-box; width: 100%;padding: 10px;border: 4px solid white;white;border-top-color: black;">
+        <div class="flex-container" >
+
+            <div class = 'w3-panel w3-card-2' style = "background-image: url(https://www.w3schools.com/w3css/img_car.jpg);"><input type = "button" class = "w3-button w3-border w3-blue" value = "^"><h1><b>Business<br>Planner</b></h1><p>............</p></div>
+            <div class = 'w3-panel w3-card-2' style = "background-image: url(https://www.w3schools.com/w3css/img_car.jpg);"><input type = "button" class = "w3-button w3-border w3-blue" value = "-"><h1><b>Awesome<br>Support</b></h1><p>..............</p></div>
+            <div class = 'w3-panel w3-card-2' style = "background-image: url(https://www.w3schools.com/w3css/img_car.jpg);"><input type = "button" class = "w3-button w3-border w3-blue" value = "*"><h1><b>Global<br>Connection</b></h1><p>..............</p></div>
+        </div>
+
+        <div class = "grid-container" style = 'width:100%;color:white;box-sizing:border-box;border: 2px solid black;box-shadow: 10px 10px 18px #888888;'>
+
+            <div style = 'width:100%;height:45px;border-radius: 25px;'>
+                <h1 style = "height:150px;width:340px;background-color:grey;border-radius: 25px;"><b>Focus On</b><br><b>Your Victories</b></h1><BR><br><br><br>
+                <p style = "height:100px;width:200px;background-color:grey; border-left: 2px solid blue;text-align:left;font-size:15px;"><br><br>Save time-we focus on the<br>details</p>
+            </div>
+
+            <div style = 'width:300px;height:400px;margin-right:50px;'><img src = "https://www.w3schools.com/tags/workplace.jpg"></div>
+        </div>
+
+        <div class = 'grid-container' style="width:100%;height:300px;background-color:white;color:white;">
+            <div class="grid-item"><br><br><p style = 'font-size:10px;color:white;font-family: "Lucida Console";'><i class="glyphicon glyphicon-cloud"></i>New South Wales 2480, Australia
+            <br><br><br><i class="glyphicon glyphicon-envelope"></i>support@mobirise.com<bR><br><br><i class="glyphicon glyphicon-user"></i>+1(800) 123 456 789
+            <br><input type="button" class = 'w3-circle facebook' value = 'f' style="background-color:blue;color:white;">
+                <input type="button" class = 'w3-circle link' value = 'in' style="background-color:blue;color:white;">
+                <input type="button" style="background-color:blue; color: white"; class = 'w3-circle twitter' value = 'T'>
+            </p></div>
+
+            <div class="grid-item">
+                <input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Home'></input>
+                <input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Group Profile'></input>
+                <br><input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='History'></input>
+                <input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='About'></input>
+                <br><input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Awards'></input>
+                <input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Team'></input>
+                <br><input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Media'></input>
+                <input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Service'></input>
+                <br><input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Leadership'></input>
+                <input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='News'></input>
+                <br><input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Spotlight'></input>
+                <input type="button" class = 'w3-button' style = 'height:50px;width:100px;font-family: "Lucida Console";' value='Policy'></input>
+            </div>
+            <iframe src="https://www.google.com/"
+                    class="grid-item w3-green" width = '100%' id = "googlemap"> </iframe>
+        </div>
+
+        <script>
+
+        </script>
+</body>
+</html>
