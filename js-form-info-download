@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putting User Input into JS Objects</title>
+    <style>
+        .formBox{
+            padding: 0.5rem 2rem;
+            box-shadow: 1px 1px 1px 1px black;
+            height:50px;
+        }
+         #title {
+         width : 100%;
+         height:25px;
+         border-radius:5px;
+         }
+         #ph {
+         width : 100%;
+         height:25px;
+         border-radius:5px;
+         }
+         #query {
+         width : 100%;
+         height:25px;
+         border-radius:5px;
+         }
+        #btn {
+        background-color:green;
+        width:200px;
+        height:30px;
+        }
+        #btn:hover {
+        background-color:red;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="formBox">
+        <label for="title">Name</label>
+        <input type="text" id="title" placeholder="Title"/>
+    </div>
+    <div class="formBox">
+        <label for="ph">Phone</label>
+        <input type="text" id="ph" placeholder="Phone"/>
+    </div>
+    <div class="formBox">
+        <label for="query">Query</label>
+        <input type="text" id="query" placeholder="Query"/>
+    </div>
+    <div class="formBox">
+        <button id="btn">Submit</button>
+    </div>
+    <div id="msg">
+        <p></p>
+    </div>
+</form>
+<script>
+        let movies = [];
+        function addMovie(event) {
+        event.preventDefault();
+            let movie = {
+                id: Date.now(),
+                title: document.getElementById('title').value,
+                year: document.getElementById('ph').value,
+                query: document.getElementById('query').value
+            }
+            movies.push(movie);
+            document.forms[0].reset();
+            var aa = JSON.stringify(movies);
+            var a = document.createElement("a");
+            var file = new Blob([aa], {type: 'text/plain'});
+            a.href = URL.createObjectURL(file);
+            a.download = 'json.txt';
+            a.click();
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addMovie);
+        });
+    </script>
+</body>
+</html>
