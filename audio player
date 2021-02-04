@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<style>
+   #div{
+   background-color : coral;
+   box-shadow : 2px 5px 5px 10px;
+   border-radius : 10px;
+   margin-left:40%;
+   height:300px;
+   width:20%;
+   }
+   div img {
+   margin-left:30%;
+   margin-top:35%;
+   align-items:center;
+   border-radius: 50%;
+   width:40%;
+   height:40%;
+   object-fit:cover;
+   }
+   .a {
+   animation : ex 3s linear infinite;
+   }
+   @keyframes ex {
+   from {transform : rotate(0deg);
+   }
+   to {transform : rotate(360deg);
+   }
+   }
+
+   #play-pause , #play-pause1 {
+   border-radius:50%;
+   width:20%;
+   }
+</style>
+<div id = "div">
+    <img id = 'im' src = "https://www.w3schools.com/howto/img_avatar2.png"><br>
+    <div id = "btndiv" style = "display:flex;margin-left:30%;justify-content:center-between;">
+        <audio src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" style = "overflow:hidden;width:60%;"></audio>
+    <button onclick = "f()" id = "play-pause">Play</button>
+        <button onclick = "fn()" id = "play-pause1">Pause</button>
+</div>
+
+<script>
+    const a = document.querySelector("audio");
+    const b = document.getElementById("play-pause");
+    const im = document.getElementsByTagName("img");
+function f() {
+a.play()
+document.getElementById("im").classList.add("a")
+}
+
+function fn() {
+document.getElementById("im").classList.remove("a")
+a.pause()
+}
+
+</script>
+</body>
+</html>
