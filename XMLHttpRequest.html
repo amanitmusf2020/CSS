@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p id="p"></p>
+
+<script>
+
+const http = new XMLHttpRequest()
+
+http.open("GET", "https://www.codecademy.com/learn/bwa-ajax-requests-and-api-interactions/modules/bwa-http-requests/cheatsheet")
+http.send()
+
+http.onload = () => console.log(http.responseText)
+
+</script>
+</body>
+
+</html>
