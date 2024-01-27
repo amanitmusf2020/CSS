@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="one">hi</p>
+</body>
+<script>
+    //In this loop,for the first loop k=1 and then the loop runs where initially value of j=1, and max value of of j can be 1 only, so the loop runs once. In the second loop k=2 and j starts with one again but the value max of j can now be 2 so the loop runs twice.
+    for (let k = 1; k <= 5; k++) {
+        for (j = 1; j <= k; j++) {
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+    //value of a is 1.loop runs and b =1, but max value of b can be 3-a, which is 2. so initially loop runs twice. and then reduces to 1 run only.
+    for (let a = 1; a <= 5; a++) {
+        for (b = 1; b <= 5 - a; b++) {
+            document.write("#")
+        }
+        document.write("<br>")
+    }
+    //in this loop, m=1, and simultaneously d=1 and max it can do is 6-m i.e. 5 and it reduces. Simultaneously another loop runs where n=1 and it keep increasing by 1. So, two loops run for m, one is d and other is n loop.
+    for (let m = 1; m <= 6; m++) {
+        for (d = 1; d <= 6 - m; d++) {
+            document.write("#")
+        }
+        for (n = 1; n <= m; n++) {
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+</script>
+
+</html>
